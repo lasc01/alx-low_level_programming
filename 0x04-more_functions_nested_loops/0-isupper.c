@@ -3,19 +3,21 @@
 /**
  * _isupper - A function that checks for uppercase character.
  * @c: An input character
- * Return: 1 if c is uppercase or 0 otherwiseReturn: always 0
+ * Return: 1 if c is uppercase or 0 otherwise
  */
 int _isupper(int c)
 {
-	char cold;
-	
-	for (cold = 'A'; cold <= 'z'; cold++)
+	char uppercase = 'A';
+	int is_upper = 0;
+
+	for (; uppercase <= 'Z'; uppercase++)
 	{
-		if (cold <= 'Z')
+		if (c == uppercase)
 		{
-			return (1);
+			is_upper = 1;
 			break;
 		}
 	}
-	return (0);
+
+	return (is_upper);
 }
